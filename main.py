@@ -15,7 +15,7 @@ class Calculator(tk.Tk):
 
         self.large_font = tkfont.Font(size=20, weight="bold")
 
-        self._setup_ui()
+        self.setup()
 
     def setup(self):
         self.display_frame = tk.Frame(self, height=100)
@@ -42,7 +42,7 @@ class Calculator(tk.Tk):
         self.buttons_frame = tk.Frame(self)
         self.buttons_frame.pack(expand=True, fill="both")
 
-        self._create_buttons()
+        self.create_buttons()
 
     def create_buttons(self):
         buttons = [
@@ -111,7 +111,7 @@ class Calculator(tk.Tk):
             else:
                 self.current_input += value
 
-        self._update_display()
+        self.display()
 
     def display(self):
         self.current_label.config(text=self.current_input[:10])  # Riboja 10 simbolių veiksmo
