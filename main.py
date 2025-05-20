@@ -8,7 +8,6 @@ class Calculator(tk.Tk):
 
         self.title("Skaičiuotuvas")
         self.geometry("300x400")
-        self.resizable(False, False)
 
         self.current_input = ""
         self.total_expression = ""
