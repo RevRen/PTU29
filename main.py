@@ -59,7 +59,7 @@ class Calculator(tk.Tk):
                     self.buttons_frame,
                     text=text,
                     font=self.large_font,
-                    command=lambda x=text: self._on_button_click(x)
+                    command=lambda x=text: self.button_click(x)
                 )
                 btn.grid(
                     row=row,
@@ -76,7 +76,7 @@ class Calculator(tk.Tk):
                     self.buttons_frame,
                     text=text,
                     font=self.large_font,
-                    command=lambda x=text: self._on_button_click(x)
+                    command=lambda x=text: self.button_click(x)
                 )
                 btn.grid(
                     row=row,
@@ -92,7 +92,7 @@ class Calculator(tk.Tk):
         for i in range(5):
             self.buttons_frame.rowconfigure(i, weight=1)
 
-    def _on_button_click(self, value):
+    def button_click(self, value):
         if value == 'C':
             self.current_input = ""
             self.total_expression = ""
