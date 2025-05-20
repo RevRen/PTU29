@@ -17,7 +17,7 @@ class Calculator(tk.Tk):
 
         self._setup_ui()
 
-    def _setup_ui(self):
+    def setup(self):
         self.display_frame = tk.Frame(self, height=100)
         self.display_frame.pack(expand=True, fill="both")
 
@@ -44,7 +44,7 @@ class Calculator(tk.Tk):
 
         self._create_buttons()
 
-    def _create_buttons(self):
+    def create_buttons(self):
         buttons = [
             ('7', 0, 0), ('8', 0, 1), ('9', 0, 2), ('/', 0, 3),
             ('4', 1, 0), ('5', 1, 1), ('6', 1, 2), ('*', 1, 3),
@@ -113,7 +113,7 @@ class Calculator(tk.Tk):
 
         self._update_display()
 
-    def _update_display(self):
+    def display(self):
         self.current_label.config(text=self.current_input[:10])  # Riboja 10 simbolių veiksmo
         self.total_label.config(text=self.total_expression[:20])  # Riboja 20 simbolių atsakymo
 
