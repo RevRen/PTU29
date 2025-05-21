@@ -113,8 +113,8 @@ class Calculator(tk.Tk):
         self.display()
 
     def display(self):
-        self.current_label.config(text=self.current_input[:10])  # Riboja 10 simbolių veiksmo
-        self.total_label.config(text=self.total_expression[:20])  # Riboja 20 simbolių atsakymo
+        self.current_label.config(text=self.current_input[:10])
+        self.total_label.config(text=self.total_expression[:20])
 
 
 app = Calculator()
